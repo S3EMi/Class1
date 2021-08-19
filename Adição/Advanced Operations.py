@@ -1,8 +1,6 @@
-# Código de: Matheus de Paula Barros
-
-
-
-# A versão mais simples seria essa:
+# Nome: Matheus de Paula Barros
+# Série: 2 ano EM
+# A versão mais simples pode ser encontrada aqui: https://github.com/S3EMi/Class1/blob/main/Adição/Simple%20Addition.py
 
 # função para "pausar"
 def pause():
