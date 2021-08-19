@@ -79,7 +79,11 @@ disc = (b**2 - 4*a*c)
 try:
     res1 = (-b - mt.sqrt(disc))/(2*a)
     res2 = (-b + mt.sqrt(disc))/(2*a)
-except (ZeroDivisionError, ValueError):
+except ZeroDivisionError:
+    print("Erro: não é possível dividir por 0")
+    pause()
+    exit()
+except ValueError:
     print("Erro de domínio matemático")
     pause()
     exit()
