@@ -1,8 +1,0 @@
-print("Qual é o seu nome?")
-n = input()
-print("Qual é o seu sobrenome?")
-s = input()
-print("Quantos anos você tem?")
-a = input()
-print("Nome: " + n + " Sobrenome: " + s + " Idade: " + a)
-input("Pressione ENTER para continuar")
