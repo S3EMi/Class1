@@ -4,6 +4,9 @@
 
 
 # função para "pausar"
+
+import math as mt
+
 def pause():
     pauseProgram = input("\nPressione a tecla ENTER para continuar")
 
@@ -29,9 +32,10 @@ print("1. Adicionar")
 print("2. Subtrair")
 print("3. Multiplicar")
 print("4. Dividir")
+print("5. Calcular Bhaskara")
 
 # verifique a escolha da alternativa e faça a operação
-choice = input("\nSelecione a alternativa 1, 2, 3, 4: ")
+choice = input("\nSelecione a alternativa 1, 2, 3, 4, 5: ")
 if choice in ('1', '2', '3', '4'):
   num1 = input("\nDigite o primeiro número: ")
   num2 = input("Digite o segundo número: ")
@@ -58,7 +62,29 @@ elif choice == '3':
 elif choice == '4':
   print(num1, " / ", num2, " = ", divide(float(num1), float(num2)))
 
-else:
-    print("Escolha inválida.")
+elif choice == '5':
+
+  a = float(input("Primeiro número (a): "))
+  b = float(input("Segundo número (b): "))
+  c = float(input("Terceiro número (c): "))
+
+try:
+    float(a), float(b), float(c)
+except ValueError:
+    print("Um ou mais valores dados não foram identificados")
+    pause()
+    exit()
+
+disc = (b**2 - 4*a*c)
+try:
+    res1 = (-b - mt.sqrt(disc))/(2*a)
+    res2 = (-b + mt.sqrt(disc))/(2*a)
+except (ZeroDivisionError, ValueError):
+    print("Erro de domínio matemático")
+    pause()
+    exit()
+
+print("\nx' = ", res1)
+print("x'' = ", res2)
 
 pause()
