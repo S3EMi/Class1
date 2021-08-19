@@ -1,5 +1,5 @@
 # Nome: Matheus Barros
-# Série: 1 ano EM
+# Série: 2 ano EM
 
 def pause():
     pause = input("Pressione ENTER para continuar")
