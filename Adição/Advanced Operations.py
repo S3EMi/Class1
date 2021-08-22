@@ -100,8 +100,7 @@ def restart():
         gotor()
     except ValueError:
         print("Erro de domínio matemático")
-        pause()
-        exit()
+        gotor()
 
     print("\nx' = ", res1)
     print("x'' = ", res2)
