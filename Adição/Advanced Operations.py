@@ -2,16 +2,23 @@
 # Série: 2 ano EM
 # A versão mais simples pode ser encontrada aqui: https://github.com/S3EMi/Class1/blob/main/Adição/Simple%20Addition.py
 
+import os
 
-# função para "pausar"
+def clearConsole():
+    command = 'clear'
+    if os.name in ('nt', 'dos'):
+        command = 'cls'
+    os.system(command)
 
 import math as mt
 
 def restart():
   def gotor():
     if pause() == "":
+      clearConsole()
       restart()
     else:
+      clearConsole()
       restart()
 
   def pause():
@@ -57,17 +64,20 @@ def restart():
   # verifica a escolha e faz a operação
   if choice == '1':
     print(num1, " + ", num2, " = ", add(float(num1), float(num2)))
-
+    gotor()
 
   elif choice == '2':
     print(num1, " - ", num2, " = ", subtract(float(num1), float(num2)))
+    gotor()
 
   elif choice == '3':
     print(num1, " x ", num2, " = ", multiply(float(num1), float(num2)))
+    gotor()
 
   elif choice == '4':
     print(num1, " / ", num2, " = ", divide(float(num1), float(num2)))
-
+    gotor()
+    
   elif choice == '5':
 
     a = input("Primeiro número (a): ")
